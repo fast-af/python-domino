@@ -1,5 +1,7 @@
 # python-domino
 
+fast domino API repo forked from official domino lab API project, in order to bypass the API access issue
+
 This library provides bindings for the [Domino Data Lab API](https://dominodatalab.github.io/api-docs/).
 
 The latest released version is `1.0.6`.
