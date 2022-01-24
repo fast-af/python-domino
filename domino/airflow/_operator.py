@@ -32,6 +32,7 @@ class DominoOperator(BaseOperator):
     def __init__(
         self,
         project: str,
+        version: str,
         command: List[str],
         host: Optional[str] = None,
         api_key: Optional[str] = None,
@@ -51,6 +52,7 @@ class DominoOperator(BaseOperator):
         super(DominoOperator, self).__init__(*args, **kwargs)
 
         self.project = project
+        self._version = version
         self._api_key = api_key
         self._host = host
         self._domino_token_file = domino_token_file
@@ -72,7 +74,7 @@ class DominoOperator(BaseOperator):
 
         self.log.info("Initializing Client...")
         self.client = Domino(
-            self.project, self._api_key, self._host, self._domino_token_file
+            self.project, self._version, self._api_key, self._host, self._domino_token_file
         )
         self.log.info("Client Initialized for project: %s", self.project)
 
@@ -157,6 +159,7 @@ class DominoSparkOperator(BaseOperator):
     def __init__(
         self,
         project: str,
+        version: str,
         command: str,
         host: Optional[str] = None,
         api_key: Optional[str] = None,
@@ -176,6 +179,7 @@ class DominoSparkOperator(BaseOperator):
         self.log.info("Initializing Client...")
 
         self.project = project
+        self._version = version
         self._api_key = api_key
         self._host = host
         self._domino_token_file = domino_token_file
@@ -195,7 +199,7 @@ class DominoSparkOperator(BaseOperator):
 
         self.log.info("Initializing Client...")
         self.client = Domino(
-            self.project, self._api_key, self._host, self._domino_token_file
+            self.project, self._version, self._api_key, self._host, self._domino_token_file
         )
         self.log.info("Client Initialized for project: %s", self.project)
 

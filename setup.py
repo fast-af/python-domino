@@ -25,19 +25,19 @@ def get_version():
 
 
 setup(
-    name="dominodatalab",
+    name="fastdomino",
     version=get_version(),
-    author="Domino Data Lab",
-    author_email="support@dominodatalab.com",
+    author="Hao Xu",
+    author_email="hao.xu@fast.co",
     packages=find_packages(),
     scripts=[],
-    url="https://github.com/dominodatalab/python-domino",
-    download_url='https://github.com/dominodatalab/python-domino/archive/' + get_version() + '.zip',
+    url="https://github.com/fast-af/python-domino",
+    download_url='https://github.com/fast-af/python-domino/archive/' + get_version() + '.zip',
     license="Apache Software License (Apache 2.0)",
-    description="Python bindings for the Domino API",
+    description="Python bindings for the Domino API Fork by fast.co",
     long_description=README,
     long_description_content_type="text/markdown",
-    keywords=["Domino Data Lab", "API"],
+    keywords=["Domino Data Lab", "API", "FAST"],
     install_requires=["requests>=2.4.2", "bs4==0.*,>=0.0.1", "polling2"],
     tests_require=[
         "pytest==6.2.2",

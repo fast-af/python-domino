@@ -44,8 +44,7 @@ class Domino:
 
         # Get version
         # self._version = self.deployment_version().get("version")
-        # fix the issue that domino version url is not /v1 or /v4, which is not accessible by
-        # API
+        # fix the issue that domino version url is not /v1 or /v4, which is not accessible by API
         self._version = version
         self._logger.info(f"Domino deployment {host} is running version {self._version}")
 
