@@ -40,11 +40,12 @@ You can set up the connection by creating new instance of `Domino`.
 
 <hr>
 
-### *class* Domino(project, api_key=None, host=None, domino_token_file=None)
+### *class* Domino(project, version, api_key=None, host=None, domino_token_file=None)
 
 The parameters are:
 
 * *project:* A project identifier (in the form of ownerusername/projectname)
+* *version:* A domino lab platform version identifier (can get domino version at <domain</version)
 * *api_key:* (Optional) An API key to authenticate with. If not provided the library will expect to find one
   in the DOMINO_USER_API_KEY environment variable.
 * *host:* (Optional) A host URL. If not provided the library will expect to find one in the DOMINO_API_HOST
